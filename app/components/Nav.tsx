@@ -9,7 +9,6 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/#services", label: "Services" },
   { href: "/#portfolio", label: "Portfolio" },
-  { href: "/resume.pdf", label: "Resume", external: true },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -32,19 +31,8 @@ export default function Nav() {
 
         <div className="hidden items-center gap-8 md:flex">
           {links.map((l) => {
-            const active = !l.external && pathname === l.href;
-            return l.external ? (
-              <a
-                key={l.label}
-                href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative flex items-center gap-1.5 font-mono text-sm uppercase tracking-[0.1em] text-white transition hover:text-blue-tint"
-              >
-                {l.label}
-                <span className="h-[2px] w-0 bg-blue transition-all duration-300 group-hover:w-full" />
-              </a>
-            ) : (
+            const active = pathname === l.href;
+            return (
               <Link
                 key={l.label}
                 href={l.href}
@@ -94,20 +82,9 @@ export default function Nav() {
             }`}
           >
             {links.map((l, i) => {
-              const active = !l.external && pathname === l.href;
+              const active = pathname === l.href;
               const index = `0${i + 1}`;
-              return l.external ? (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 rounded-md px-2 py-3 font-sans text-base text-white transition hover:bg-white/5 hover:text-blue-tint"
-                >
-                  <span className="font-mono text-xs text-blue-tint/60">{index}</span>
-                  {l.label}
-                </a>
-              ) : (
+              return (
                 <Link
                   key={l.label}
                   href={l.href}
