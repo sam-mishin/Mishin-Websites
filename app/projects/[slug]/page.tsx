@@ -87,7 +87,7 @@ export default function CaseStudyPage({
             </div>
           )}
 
-          <p className="max-w-[700px] text-justify text-lg leading-relaxed text-ink-muted">
+          <p className="max-w-[700px] text-lg leading-relaxed text-ink-muted">
             {project.desc}
           </p>
 
@@ -102,7 +102,7 @@ export default function CaseStudyPage({
                   <span className="h-[2px] w-16 bg-gradient-to-r from-blue to-transparent" />
                   <div className="flex flex-col gap-4">
                     {s.paragraphs!.map((para, i) => (
-                      <p key={i} className="text-justify text-lg leading-relaxed text-ink-muted">
+                      <p key={i} className="text-lg leading-relaxed text-ink-muted">
                         {para}
                       </p>
                     ))}

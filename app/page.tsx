@@ -135,7 +135,7 @@ export default function Home() {
                 <h2 className="font-sans text-[clamp(24px,3vw,42px)] font-medium leading-[1.15] text-blue-tint">
                   Webflow Developer &amp; Designer
                 </h2>
-                <p className="mt-2 max-w-[600px] text-justify text-lg leading-relaxed text-ink-muted">
+                <p className="mt-2 max-w-[600px] text-lg leading-relaxed text-ink-muted">
                   Webflow expert with 3+ years building fast, conversion focused
                   sites for small and medium businesses. I handle the full build
                   so you can focus on growth.
@@ -212,7 +212,7 @@ export default function Home() {
                       <span className="font-mono text-xs text-ink-muted/50">0{i + 1}</span>
                     </div>
                     <h3 className="font-sans text-xl font-semibold text-white">{s.title}</h3>
-                    <p className="text-justify text-base leading-relaxed text-ink-muted">{s.desc}</p>
+                    <p className="text-base leading-relaxed text-ink-muted">{s.desc}</p>
                     <span className="mt-auto h-[2px] w-0 bg-gradient-to-r from-blue to-blue-tint transition-all duration-500 group-hover:w-full" />
                   </div>
                 </div>
@@ -281,7 +281,7 @@ export default function Home() {
                       <span>In Progress</span>
                     </div>
                     <h3 className="font-sans text-xl font-semibold text-white">{p.title}</h3>
-                    <p className="flex-1 text-justify text-base leading-relaxed text-ink-muted">{p.desc}</p>
+                    <p className="flex-1 text-base leading-relaxed text-ink-muted">{p.desc}</p>
                     {p.tags && p.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {p.tags.map((tag) => (
@@ -308,7 +308,7 @@ export default function Home() {
             <SectionHeading index="06" title="Contact" />
             <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-0 md:-mx-[50px]">
               <div className="flex flex-col gap-6 md:px-[50px]">
-                <p className="max-w-[600px] text-justify text-lg leading-relaxed text-ink-muted">
+                <p className="max-w-[600px] text-lg leading-relaxed text-ink-muted">
                   Looking for someone who can own your website end to end, covering
                   design, build, and ongoing growth? I&apos;m always available to chat
                   about a potential project or an exciting opportunity.

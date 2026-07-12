@@ -37,7 +37,7 @@ function ProjectCard({ project }: { project: Project }) {
         <h3 className="font-sans text-xl font-semibold text-white md:text-2xl">
           {project.title}
         </h3>
-        <p className="text-justify text-base leading-relaxed text-ink-muted md:text-lg">
+        <p className="text-base leading-relaxed text-ink-muted md:text-lg">
           {project.desc}
         </p>
       </div>
