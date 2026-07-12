@@ -17,8 +17,8 @@ module.exports = {
         rule: "#DDE3EF",
       },
       fontFamily: {
-        sans: ["DM Sans", "sans-serif"],
-        mono: ["DM Mono", "monospace"],
+        sans: ["var(--font-dm-sans)", "sans-serif"],
+        mono: ["var(--font-dm-mono)", "monospace"],
       },
       keyframes: {
         "fade-in-up": {

@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
+import { DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import GridBackground from "./components/GridBackground";
 import CursorGlow from "./components/CursorGlow";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-dm-mono",
+  display: "swap",
+});
 
 const title = "Sam Mishin, Webflow Developer & Designer";
 const description =
@@ -44,19 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${dmSans.variable} ${dmMono.variable}`}>
       <body className="font-sans">
         <div className="flex min-h-screen flex-col overflow-x-clip">
           <GridBackground />
