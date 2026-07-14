@@ -34,6 +34,28 @@ export const currentProjects: CurrentProject[] = [
 
 export const projects: Project[] = [
   {
+    title: "KKG Accountancy",
+    desc: "Customized a Webflow template into a premium site for an e-commerce tax accounting firm, with a custom blog template built for granular styling control.",
+    image: "/images/kkg-accountancy.png",
+    icons: [
+      "https://cdn.prod.website-files.com/68794d08eac9dea323b52b8e/68fd46461596d44ee42b1926_Mark_Logo_Blue.svg",
+    ],
+    liveUrl: "https://kkgaccountancy.com",
+    slug: "kkg-accountancy",
+    category: "web",
+    role: "Design & Development",
+    problem: [
+      "Karl Camden, founder of KKG Accountancy, needed a site for his e-commerce tax accounting business. The site couldn't just look good, it had to communicate a premium feel and brand that matched the trust an accounting firm needs to earn, and it needed to actually convert visitors into customers rather than just sit there looking nice.",
+    ],
+    solution: [
+      "I customized a Webflow template to fit KKG's brand and premium positioning rather than building from a blank canvas, which let me focus the effort on the details that make a site feel high end, typography, spacing, imagery, and conversion focused CTAs, instead of rebuilding structural basics that were already solid.",
+      "I also built out a custom blog template from scratch. Webflow's default CMS blog templates are fairly rigid, so I pushed the CMS to its limits to get granular control over styling within individual blog posts, giving KKG far more flexibility in how content is presented than a standard Webflow blog setup allows.",
+    ],
+    result: [
+      "KKG Accountancy came away with a premium, credible looking site built to convert visitors into clients, along with a custom blog system that gives them much more styling control over their content than an out of the box Webflow blog would allow.",
+    ],
+  },
+  {
     title: "AirBnB Website",
     desc: "Designed a website for an Airbnb in Relume and Figma, developing the final build in Webflow. Clear CTAs on the site boosted bookings.",
     image: "https://cdn.prod.website-files.com/68794d08eac9dea323b52b8e/68bc7ab875351f8186049991_Screenshot%202025-09-06%20141417.jpg",
