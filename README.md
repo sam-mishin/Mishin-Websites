@@ -1,30 +1,49 @@
-# Mishin Websites — Portfolio Site
+# Mishin Websites: Portfolio Site
 
-A single-page Next.js site, ready to deploy on Vercel for free (no Webflow hosting fees).
+The source for [mishinwebsites.com](https://mishinwebsites.com), the portfolio and client inquiry site for my freelance web design and development work.
+
+Built with Next.js 14 (App Router), TypeScript and Tailwind CSS, and deployed on Vercel.
+
+## Features
+
+- **Project case studies.** Each project lives in one data file (`app/data/projects.ts`). Case study pages under `/projects/[slug]` are built from it at build time with `generateStaticParams`, and include previous/next navigation.
+- **Contact form.** Custom selects for project type and budget, and it opens a pre-filled email with no backend needed.
+- **SEO.** Metadata API, generated Open Graph and Twitter images, `sitemap.ts` and `robots.ts`.
+- **Polish.** Scroll-reveal animations, a cursor glow effect, a grid background, and custom loading, error and 404 pages.
+- **Brand.** DM Sans and DM Mono through `next/font`, with a navy/blue palette set in `tailwind.config.js`.
+
+## Project structure
+
+```
+app/
+├── page.tsx                 # Home page
+├── contact/page.tsx         # Contact page
+├── projects/[slug]/page.tsx # Case study template
+├── data/projects.ts         # All project content
+├── components/              # Nav, Footer, ContactForm, Reveal, CursorGlow, …
+├── lib/og-image.tsx         # Shared Open Graph image layout
+├── sitemap.ts, robots.ts
+└── opengraph-image.tsx, twitter-image.tsx
+public/images/               # Project screenshots
+```
 
 ## Run locally
-```
+
+```bash
 npm install
 npm run dev
 ```
-Open http://localhost:3000
 
-## Deploy to Vercel
-1. Push this folder to a GitHub repo.
-2. Go to vercel.com → New Project → import the repo.
-3. Framework preset: Next.js (auto-detected). No env vars needed. Click Deploy.
-4. Add your custom domain (mishinwebsites.com) in Vercel → Project → Settings → Domains,
-   then update your domain's DNS as instructed.
+Open http://localhost:3000.
 
-## Notes
-- Images currently hotlink to your existing Webflow CDN asset URLs (cdn.prod.website-files.com).
-  These will keep working as long as those assets stay published on Webflow. For full
-  independence, download the images you want to keep and drop them in `public/images/`,
-  then swap the `src` paths in `app/page.tsx` to `/images/yourfile.ext`.
-- Two placeholder project cards are included in the "Web Projects" section — replace the
-  `title`, `desc`, `image`, and `icons` fields in `app/page.tsx` (`webProjects` array) with
-  your next real projects.
-- Case studies: `app/projects/[slug]/page.tsx` has a stub route per project. Fill in the
-  `caseStudies` object with real write-ups as you produce them — no routing changes needed.
-- Brand colors and fonts (DM Sans + DM Mono, navy/blue palette) match your proposal template
-  and are defined in `tailwind.config.js`.
+## Adding a project
+
+Add an entry to the `projects` array in `app/data/projects.ts` with a title, slug, image and write-up. The home page and the new case study page pick it up automatically.
+
+## Deploy
+
+Push to `main` and Vercel builds and deploys it. No environment variables are needed.
+
+## Tech
+
+Next.js 14 · React 18 · TypeScript · Tailwind CSS · Vercel
